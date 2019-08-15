@@ -7,15 +7,12 @@ namespace BubbleSort
         static void Main(string[] args)
         {
             // array to be sorted
-            int[] toSort = GenerateRandomIntArray(0, 100, 20);
+            int[] toSort = GenerateRandomIntArray(0, 100, 1000);
 
             Console.WriteLine(string.Join(',', toSort));
 
-            // don't go until the end each time( 100  versus 55)
             ClassicSort((int[])toSort.Clone());
-            // 40 iteration
             WhileSort((int[])toSort.Clone());
-            // 
             OptimizedWhileSort((int[])toSort.Clone());
         }
 
